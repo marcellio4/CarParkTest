@@ -15,8 +15,8 @@ and the calculate Output Change in the least amount of coins/notes for change
 
 ## Test Examples:
 
-Time in:        9:06
-Time Out:       10:17
-Payment In:     £5
-Output Cost:    £3.11
-Output Change : £1, 50p, 20p, 10p, 5p, 2p, 2p
+Time in:        9:06\
+Time Out:       10:17\
+Payment In:     £5\
+Output Cost:    £3.11\
+Output Change : £1, 50p, 20p, 10p, 5p, 2p, 2p\
