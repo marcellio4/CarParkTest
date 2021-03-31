@@ -1,14 +1,18 @@
 ## Getting Started
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Here is our take on the famous Facebook programming assessment – the Coin Change problem
 
-## Folder Structure
+• A car park has a payment machine that accepts only cash – notes and coins
+• It’s a max stay 24-hour car park, so cars cannot stay longer than this duration or they get towed! • It costs £3.00 for the first hour, and then 1p for every extra min stayed. 
+• Coins are 1p, 2p, 5p, 10p, 20p, 50p and £1; Notes can be £5, £10, and £20
 
-The workspace contains two folders by default, where:
+Write code in any language to take inputs: Time in, Time Out; Output Cost, then ask for Payment in
+and the calculate Output Change in the least amount of coins/notes for change
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Test Examples:
 
-## Dependency Management
-
-The `JAVA DEPENDENCIES` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-pack/blob/master/release-notes/v0.9.0.md#work-with-jar-files-directly).
+Time in:        9:06                                16:14                           22:42
+Time Out:       10:17                               19:09                           21:17
+Payment In:     £5                                  £10                             £20, £1, £1, £1, £1, £1, £1
+Output Cost:    £3.11                               £4.15                           £25.35
+Output Change : £1, 50p, 20p, 10p, 5p, 2p, 2p       £5, 50p, 20p, 10p, 5p           50p, 10p, 5p
