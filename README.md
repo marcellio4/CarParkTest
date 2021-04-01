@@ -20,3 +20,9 @@ and the calculate Output Change in the least amount of coins/notes for change
     Payment In:     £5
     Output Cost:    £3.11
     Output Change : £1, 50p, 20p, 10p, 5p, 2p, 2p
+    
+    Time in:        16:14
+    Time Out:       19:09
+    Payment In:     £10
+    Output Cost:    £4.15
+    Output Change : £5, 50p, 20p, 10p, 5p
