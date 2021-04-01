@@ -51,16 +51,14 @@ public class PaymentMachine implements PaymentMachineInterface {
      * @param coin
      * @param note
      */
-    public void setInsertedMoneyIn(Coins coin, Notes note) {
-        for (String money : moneyIn) {
-            if (coin.isCoin(money)) {
-                double coinMoney = coin.getPenceNumeration(money);
-                coin.setInsertedCoins(coinMoney);
-            }
-            if (note.isNotes(money)) {
-                double noteMoney = note.getNotesNumeration(money);
-                note.setInsertedNotes(noteMoney);
-            }
+    public void setInsertedMoneyIn(String money, Coins coin, Notes note) {
+        if (coin.isCoin(money)) {
+            double coinMoney = coin.getPenceNumeration(money);
+            coin.setInsertedCoins(coinMoney);
+        }
+        if (note.isNotes(money)) {
+            double noteMoney = note.getNotesNumeration(money);
+            note.setInsertedNotes(noteMoney);
         }
     }
 

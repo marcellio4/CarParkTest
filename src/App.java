@@ -25,7 +25,7 @@ public class App {
                 System.out.println("Please enter correct cash coin or note");
             } else {
                 machine.setMoneyIn(cash);
-                machine.setInsertedMoneyIn(coin, note);
+                machine.setInsertedMoneyIn(cash, coin, note);
                 if (machine.outpustCost(machine.timeDiffInMinutes()) < machine.getTotalInsertedMoney(coin, note)) {
                     flag = false;
                 } else {
