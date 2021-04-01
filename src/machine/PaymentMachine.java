@@ -29,15 +29,6 @@ public class PaymentMachine implements PaymentMachineInterface {
     }
 
     /**
-     * Set money to our arrayList of inserted money
-     * 
-     * @param money
-     */
-    public void setMoneyIn(String money) {
-        this.moneyIn.add(money);
-    }
-
-    /**
      * 
      * @return arrayList of all inserted money
      */
@@ -55,10 +46,12 @@ public class PaymentMachine implements PaymentMachineInterface {
         if (coin.isCoin(money)) {
             double coinMoney = Coins.getPenceNumeration(money);
             coin.setInsertedCoins(coinMoney);
+            this.moneyIn.add(money);
         }
         if (note.isNotes(money)) {
             double noteMoney = Notes.getNotesNumeration(money);
             note.setInsertedNotes(noteMoney);
+            this.moneyIn.add(money);
         }
     }
 
