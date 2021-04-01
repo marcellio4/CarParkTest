@@ -31,7 +31,7 @@ public class Notes {
      * @param note
      * @return
      */
-    public Double getNotesNumeration(String note) {
+    public static Double getNotesNumeration(String note) {
         switch (note) {
         case "$5":
             return 5.00;

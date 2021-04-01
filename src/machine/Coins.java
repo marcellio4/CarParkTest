@@ -31,7 +31,7 @@ public class Coins {
      * @param coin
      * @return
      */
-    public Double getPenceNumeration(String coin) {
+    public static Double getPenceNumeration(String coin) {
         switch (coin) {
         case "1p":
             return 0.1;

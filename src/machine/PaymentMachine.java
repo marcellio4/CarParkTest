@@ -53,11 +53,11 @@ public class PaymentMachine implements PaymentMachineInterface {
      */
     public void setInsertedMoneyIn(String money, Coins coin, Notes note) {
         if (coin.isCoin(money)) {
-            double coinMoney = coin.getPenceNumeration(money);
+            double coinMoney = Coins.getPenceNumeration(money);
             coin.setInsertedCoins(coinMoney);
         }
         if (note.isNotes(money)) {
-            double noteMoney = note.getNotesNumeration(money);
+            double noteMoney = Notes.getNotesNumeration(money);
             note.setInsertedNotes(noteMoney);
         }
     }
