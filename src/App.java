@@ -15,6 +15,13 @@ public class App {
         System.out.println("Please enter Time Out for car park (format: yy/MM/dd HH:mm)");
         String timeOut = reader.readLine();
         PaymentMachine machine = new PaymentMachine(timeIn, timeOut);
+
+        if (machine.maxStay()) {
+            System.out.println(
+                    "It’s a max stay 24-hour car park, so cars cannot stay longer than this duration or they get towed!");
+            System.exit(1);
+        }
+        
         Coins coin = new Coins();
         Notes note = new Notes();
         boolean flag = true;
@@ -37,12 +44,6 @@ public class App {
         }
 
         reader.close();
-
-        if (machine.maxStay()) {
-            System.out.println(
-                    "It’s a max stay 24-hour car park, so cars cannot stay longer than this duration or they get towed!");
-            System.exit(1);
-        }
 
         System.out.println();
         System.out.println("/**************************************************/");
