@@ -12,9 +12,6 @@ public class Notes implements Money {
     private final String[] notes = { "$5", "$10", "$20" };
     private ArrayList<Double> insertedNotes = new ArrayList<>();
 
-    public Notes() {
-    }
-
     /**
      * Check if inserted coin is in our set of notes value
      * 

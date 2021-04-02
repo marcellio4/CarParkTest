@@ -12,9 +12,6 @@ public class Coins implements Money {
     private final String[] coins = { "1p", "2p", "5p", "10p", "20p", "50p", "$1" };
     private ArrayList<Double> insertedCoins = new ArrayList<>();
 
-    public Coins() {
-    }
-
     /**
      * Check if inserted coin is in our set of coins value
      * 

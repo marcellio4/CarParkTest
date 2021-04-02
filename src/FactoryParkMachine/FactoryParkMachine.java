@@ -8,6 +8,7 @@ import machine.PaymentMachine;
 
 /**
  * Creates and build for us classes type for Park machine software
+ * @author Marcel Zacharias
  */
 public class FactoryParkMachine implements FactoryPark {
 
