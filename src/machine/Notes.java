@@ -8,7 +8,7 @@ import java.util.Arrays;
  * @param insertedNotes arrayList of all inserted notes from client
  * @author Marcel Zacharias
  */
-public class Notes {
+public class Notes implements Money {
     private final String[] notes = { "$5", "$10", "$20" };
     private ArrayList<Double> insertedNotes = new ArrayList<>();
 
@@ -31,8 +31,9 @@ public class Notes {
      * @param note
      * @return
      */
-    public static Double getNotesNumeration(String note) {
-        switch (note) {
+    @Override
+    public Double getMoneyNumeration(String money) {
+        switch (money) {
         case "$5":
             return 5.00;
         case "$10":
