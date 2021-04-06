@@ -96,7 +96,7 @@ public class CarPaymentMachine implements PaymentMachine {
      */
     public Double outpustCost(Long number) {
         double total = number - 60;
-        return total / 100 + 3.00;
+        return Money.twoDecimal(total / 100 + 3.00);
     }
 
     /**
