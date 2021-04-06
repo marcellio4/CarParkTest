@@ -1,6 +1,5 @@
 package machine;
 
-import java.text.DecimalFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -117,8 +116,7 @@ public class CarPaymentMachine implements PaymentMachine {
      */
     @Override
     public ArrayList<String> refund(Double cash, ArrayList<String> outputChange) {
-        DecimalFormat format = new DecimalFormat("##.00");
-        cash = Double.valueOf(format.format(cash));
+        cash = Money.twoDecimal(cash);
         if (cash >= 20.00) {
             outputChange.add("$20");
             refund((cash - 20.00), outputChange);

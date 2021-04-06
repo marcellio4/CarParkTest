@@ -1,9 +1,9 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.text.DecimalFormat;
 
 import FactoryParkMachine.FactoryParkMachine;
 import machine.Coins;
+import machine.Money;
 import machine.Notes;
 import machine.CarPaymentMachine;
 
@@ -68,10 +68,8 @@ public class App {
         System.out.println("Output Cost: $" + carPaymentMachine.outpustCost(carPaymentMachine.timeDiffInMinutes()));
         Double diffOfMoneyInAndCost = carPaymentMachine.getTotalInsertedMoney(coin, note)
                 - carPaymentMachine.outpustCost(carPaymentMachine.timeDiffInMinutes());
-        DecimalFormat format = new DecimalFormat("##.00");
         System.out.print("Output Change: ");
-        String difference = format.format(diffOfMoneyInAndCost);
-        carPaymentMachine.refund(Double.valueOf(difference), carPaymentMachine.getMoneyChangeList());
+        carPaymentMachine.refund(Money.twoDecimal(diffOfMoneyInAndCost), carPaymentMachine.getMoneyChangeList());
 
         int size = carPaymentMachine.getMoneyChangeList().size();
         int countSize = 0;
